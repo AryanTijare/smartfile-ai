@@ -1,158 +1,111 @@
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Flask](https://img.shields.io/badge/Framework-Flask-lightgrey)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Ollama](https://img.shields.io/badge/LLM-Mistral-blueviolet)
+# SmartFile AI 🚀
 
-# 🚀 SmartFile AI – Python File Summary & Query Assistant
+![SmartFile AI](https://img.shields.io/badge/Download%20Releases-blue?style=for-the-badge&logo=github&link=https://github.com/AryanTijare/smartfile-ai/releases)
 
-SmartFile AI is a powerful Python automation tool that downloads, processes, and summarizes CSV files using open-source LLMs (like Mistral or LLaMA3 via Ollama), with a beautiful dark/light UI.
+Welcome to **SmartFile AI**, an innovative project that leverages AI to automate CSV file handling. This repository combines Python, Flask, and open-source LLMs (like Ollama) to clean, summarize, and query your data seamlessly.
 
----
+## Table of Contents
 
-## ✨ Features
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-- ✅ Download data from API and Web (Selenium)
-- ✅ Auto clean & rename CSVs
-- ✅ Use open-source LLMs (like Mistral) for AI-powered summaries
-- ✅ Ask any natural language question on the file (Q&A)
-- ✅ HTML report generator
-- 🌗 Toggle between light and dark themes with icon switch (☀️ / 🌙)
+## Features 🌟
 
----
+- **AI-Powered Automation**: Utilize AI to streamline CSV file operations.
+- **Data Cleaning**: Automatically clean your datasets to enhance accuracy.
+- **Summarization**: Generate concise summaries of your data for quick insights.
+- **Querying**: Easily query your data using natural language.
+- **Web Integration**: Built with Flask for a smooth web experience.
 
+## Technologies Used 🛠️
 
-## 📸 Demo Preview
+SmartFile AI employs a variety of technologies to deliver its features:
 
-> Home 
-![alt text](Home.png)
+- **Python**: The backbone of our application, providing robust data manipulation capabilities.
+- **Flask**: A lightweight web framework that makes it easy to build APIs.
+- **Open-Source LLMs**: We use Ollama, along with models like Llama3 and Mistral from Hugging Face.
+- **Pandas**: Essential for data manipulation and analysis.
+- **HTML/CSS/JavaScript**: For front-end development, ensuring a user-friendly interface.
+- **FTPLib**: For file transfer operations.
+- **RPA and Web Automation**: Enhancing automation capabilities.
 
-> API Summary 
-![alt text](API_Summary.png)
+## Installation 🛠️
 
-> Web Summary
-![alt text](Web_Summary.png)
+To get started with SmartFile AI, follow these steps:
 
->Q & A 
-![alt text](<Q&A about file.png>)
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/AryanTijare/smartfile-ai.git
+   cd smartfile-ai
+   ```
 
----
+2. **Install Dependencies**:
+   Ensure you have Python installed. Then, install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 📁 Folder Structure
+3. **Set Up the Environment**:
+   Create a `.env` file in the root directory and add your configuration variables.
 
-```bash
-ai_report_automation_advanced/
-├── app.py # Flask app entry point
-├── main.py # Master pipeline logic
-├── api_downloader.py
-├── web_downloader.py
-├── file_extractor.py
-├── data_cleaner.py
-├── ai_summary.py # Summary generation with LLM
-├── question_answering.py # Q&A logic
-├── report_generator.py
-├── templates/
-│ ├── index.html # UI with dark mode + toggle
-│ └── report_template.html # HTML report
-├── input_data/
-│ ├── api/ # API downloaded CSV
-│ └── web/ # Web ZIPs & CSV
-├── output_reports/
-│ ├── api/clear_api.csv
-│ └── web/clear_web.csv
-├── config/.env # FTP settings (optional)
+4. **Run the Application**:
+   Start the Flask server:
+   ```bash
+   python app.py
+   ```
 
----
+5. **Access the Application**:
+   Open your web browser and go to `http://localhost:5000`.
 
-## ⚙️ Requirements
+## Usage 📊
 
+SmartFile AI provides an intuitive interface for users to interact with their CSV files. Here's how to make the most of it:
 
-- Python 3.10+
-- Google Chrome
-- [Ollama](https://ollama.com/download) (for local LLMs)
-- ChromeDriver (version matching your Chrome)
-- Git (for cloning)
+1. **Upload Your CSV**: Use the upload feature on the homepage to select your CSV file.
+2. **Clean Your Data**: After uploading, choose the cleaning options you want. The AI will process your data and present the cleaned version.
+3. **Summarize**: Click on the summarize button to generate a brief overview of your dataset.
+4. **Query Your Data**: Use the query feature to ask questions about your data in natural language. The AI will return the relevant information.
 
----
+For detailed instructions and examples, check the documentation in the `docs` folder.
 
-## 🛠️ Installation
+## Contributing 🤝
 
-### 1. Clone the repo
+We welcome contributions from the community! If you want to contribute, please follow these steps:
 
-```bash
-git clone https://github.com/your-username/smartfile-ai.git
-cd smartfile-ai
+1. **Fork the Repository**: Click the fork button at the top right of the repository page.
+2. **Create a Branch**: Use a descriptive name for your branch:
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make Changes**: Implement your feature or fix a bug.
+4. **Commit Your Changes**:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Fork**:
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+6. **Create a Pull Request**: Go to the original repository and click on "New Pull Request."
 
+## License 📜
 
----
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-2. Create Virtual Environment
+## Contact 📬
 
-python -m venv venv
-venv\Scripts\activate   # On Windows
-# source venv/bin/activate   # On Linux/macOS
+For any questions or feedback, feel free to reach out:
 
-3. Install Requirements
+- **Email**: your.email@example.com
+- **GitHub**: [AryanTijare](https://github.com/AryanTijare)
 
-pip install -r requirements.txt
-
-If no requirements.txt, run:
-
-pip freeze > requirements.txt
-
----
-
-🔐 Environment Setup (.env)
-Create a file at config/.env and add:
-
-
-ftp_server=example.com
-ftp_ip=192.168.1.1
-ftp_port=21
-ftp_user=youruser
-ftp_pass=yourpass
+For the latest updates and releases, visit our [Releases](https://github.com/AryanTijare/smartfile-ai/releases) section.
 
 ---
 
-🤖 Ollama Setup
-
-1. Install Ollama
-Download from: https://ollama.com/download
-(Available for Windows, macOS, Linux)
-
----
-
-2. Pull a Model
-
-ollama pull mistral
-Alternatives:
-
-llama3
-
-tinyllama
-
-phi3
-
----
-
-3. Start the Model
-
-ollama run mistral
-🧠 Update Model in Code
-In both ai_summary.py & question_answering.py, make sure the model is:
-
-
-"model": "mistral"
-
----
-
-🚀 Start the Flask App
-
-python app.py
-App runs at:
-🔗 http://127.0.0.1:5000
-
----
-
-# Terminal - Ollama
-ollama run mistral or any other
-
+Thank you for checking out SmartFile AI! We hope it simplifies your data handling tasks.
